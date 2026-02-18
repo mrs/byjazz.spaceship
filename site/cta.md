@@ -1,13 +1,13 @@
 # 💼 Hire me if you like this post
 
-I'm available for **freelance projects** and **full-time opportunities**.
+I'm available for **trainings and short term coaching** and sometimes for **full-time opportunities**.
 
 Whether you need:
 
-- A modern, performant website
-- Technical consultation
-- Code review and optimization
-- Or just want to chat about web development
+- An assessment of your current agile maturity
+- Insights on how to tackle specific scaling challenges
+- Refresher on agile practices (Scrum Ceremonies, User Story Mapping,...)
+- Or just want to chat about agility, its challenges, pitfalls, promises, and opportunities
 
 Let's build something amazing together!
 

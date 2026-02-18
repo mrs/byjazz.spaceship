@@ -51,9 +51,9 @@ export interface SiteConfig {
 }
 
 export const SITE: SiteConfig = {
-  author: 'Astronaut',
-  desc: 'Developer and designer building premium web experiences.',
-  title: 'Spaceship',
+  author: 'Maxime Robert-Schreyers',
+  desc: 'Scrum Master and Agile Coach',
+  title: 'ByJazz',
   ogImage: 'og.png',
   lang: 'en-US',
   base: '/',

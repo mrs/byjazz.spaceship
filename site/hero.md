@@ -1,6 +1,3 @@
-# I'm {author}, developer and designer.
+# I'm {author}, Agile Coach, Trainer, and Scrum Master.
 
-Building premium web experiences with Astro, Svelte, and Tailwind.
-Focused on performance, aesthetics, and clean code.
-
-I am currently working on open-source tools and sharing my journey through writing.
+Uplifting teams towards self management, increasing ownership and commitment. Dedicated to delivery acceleration through people and team growth, and organisational troubleshooting.
