@@ -49,6 +49,16 @@ const projects = defineCollection({
   }),
 });
 
+const glossaryItems = defineCollection({
+  loader: glob({
+    pattern: ['**/*.{md,mdx}', '!**/_*'],
+    base: './site/content/glossary',
+  }),
+  schema: z.object({
+    entry: z.string(),
+  }),
+});
+
 const appearances = defineCollection({
   loader: glob({
     pattern: ['**/*.{md,mdx}', '!**/_*'],
@@ -77,4 +87,4 @@ const about = defineCollection({
   }),
 });
 
-export const collections = { posts, projects, appearances, about };
+export const collections = { posts, projects, glossaryItems, appearances, about };

@@ -1,0 +1,73 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import Breadcrumbs from '@/components/Breadcrumbs.svelte';
+
+const glossaryItems = await getCollection('glossaryItems');
+
+const itemsByFirstLetter = glossaryItems.reduce(
+  (acc, item) => {
+    const firstLetter = item.data.entry[0].toString();
+    if (!acc[firstLetter]) acc[firstLetter] = [];
+    acc[firstLetter].push(item);
+    return acc;
+  },
+  {} as Record<string, typeof glossaryItems>
+);
+
+const sortedLetters = Object.keys(itemsByFirstLetter).sort((a, b) => b < a);
+---
+
+<Layout title="Appearances & Publications">
+  <Breadcrumbs items={[{ name: 'Glossary', href: '/glossary' }]} />
+
+  <div class="mb-12 sm:mb-16 lg:mb-24">
+    <h1
+      class="text-3xl sm:text-4xl lg:text-5xl 3xl:text-6xl font-black tracking-tight text-foreground leading-[1.1]"
+    >
+      Glossary
+    </h1>
+    <p class="mt-4 text-base sm:text-lg lg:text-xl text-muted-foreground max-w-2xl leading-relaxed">
+      Definitions and explanations of the vocabulary and specialized terminology found accross the
+      blog articles.
+    </p>
+  </div>
+
+  <div class="space-y-16">
+    {
+      sortedLetters.map((letter) => (
+        <section class="relative pl-8 sm:pl-0">
+          <h1 class="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-8 sticky top-20 bg-background/95 backdrop-blur py-2 w-max rounded-r-lg lg:static lg:bg-transparent lg:mb-6">
+            {letter}
+          </h1>
+          <div class="border-l border-border/50 space-y-8 pl-8 sm:pl-12 relative">
+            <div class="absolute top-0 bottom-0 left-0 w-px bg-gradient-to-b from-transparent via-border to-transparent hidden sm:block" />
+            {itemsByFirstLetter[letter]
+              .sort((a, b) => b.data.entry - a.data.entry)
+              .map((item) => {
+                return (
+                  <article
+                    id={item.data.entry}
+                    class="group relative flex flex-col sm:flex-row gap-4 sm:gap-8 items-start"
+                  >
+                    <div class="absolute -left-[41px] sm:-left-[57px] top-1.5 h-5 w-5 rounded-full border-2 border-border bg-background flex items-center justify-center group-hover:border-primary group-hover:scale-110 transition-all duration-300">
+                      <div class="h-1.5 w-1.5 rounded-full bg-muted-foreground group-hover:bg-primary transition-colors" />
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <h3 class="text-lg sm:text-xl font-bold leading-tight mb-2 group-hover:text-primary transition-colors">
+                        {item.data.entry}
+                      </h3>
+
+                      <p class="text-base text-muted-foreground leading-relaxed mb-3">
+                        {item.body}
+                      </p>
+                    </div>
+                  </article>
+                );
+              })}
+          </div>
+        </section>
+      ))
+    }
+  </div>
+</Layout>
