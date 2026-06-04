@@ -168,12 +168,12 @@ const appearances = (await getCollection('appearances'))
                             class={`inline-flex items-center px-2 py-0.5 rounded text-xs font-bold uppercase tracking-wide ${
                               type === 'commercial'
                                 ? 'bg-primary/10 text-primary border border-primary/20'
-                                : type === 'open-source'
+                                : type === 'personal'
                                   ? 'bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-500/20'
                                   : 'bg-indigo-500/10 text-indigo-700 dark:text-indigo-300 border border-indigo-500/20'
                             }`}
                           >
-                            {type === 'open-source' ? 'Open Source' : type}
+                            {type === 'personal' ? 'Personal' : type}
                           </span>
                         ))}
                       </div>
