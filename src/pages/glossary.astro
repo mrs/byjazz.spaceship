@@ -60,8 +60,8 @@ const sortedLetters = Object.keys(itemsByFirstLetter).sort((a, b) => b < a);
 
                       <p
                         class="text-base text-muted-foreground leading-relaxed mb-3"
-                        set:html={item.rendered.html}
-                      ></p>
+                        set:html={item.rendered ? item.rendered.html : ''}
+                      />
                     </div>
                   </article>
                 );
