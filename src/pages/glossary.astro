@@ -43,7 +43,7 @@ const sortedLetters = Object.keys(itemsByFirstLetter).sort((a, b) => b < a);
           <div class="border-l border-border/50 space-y-8 pl-8 sm:pl-12 relative">
             <div class="absolute top-0 bottom-0 left-0 w-px bg-gradient-to-b from-transparent via-border to-transparent hidden sm:block" />
             {itemsByFirstLetter[letter]
-              .sort((a, b) => b.data.entry - a.data.entry)
+              .sort((a, b) => b.data.entry.localCompare(a.data.entry))
               .map((item) => {
                 return (
                   <article class="group relative flex flex-col sm:flex-row gap-4 sm:gap-8 items-start">
