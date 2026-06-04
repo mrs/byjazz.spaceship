@@ -15,7 +15,7 @@ const itemsByFirstLetter = glossaryItems.reduce(
   {} as Record<string, typeof glossaryItems>
 );
 
-const sortedLetters = Object.keys(itemsByFirstLetter).sort((a, b) => b < a);
+const sortedLetters = Object.keys(itemsByFirstLetter).sort((a, b) => b.localeCompare(a));
 ---
 
 <Layout title="Agile terms and jargon explained">
