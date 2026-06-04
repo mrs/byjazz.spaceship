@@ -18,7 +18,7 @@ const itemsByFirstLetter = glossaryItems.reduce(
 const sortedLetters = Object.keys(itemsByFirstLetter).sort((a, b) => b < a);
 ---
 
-<Layout title="Appearances & Publications">
+<Layout title="Agile terms and jargon explained">
   <Breadcrumbs items={[{ name: 'Glossary', href: '/glossary' }]} />
 
   <div class="mb-12 sm:mb-16 lg:mb-24">
@@ -46,21 +46,22 @@ const sortedLetters = Object.keys(itemsByFirstLetter).sort((a, b) => b < a);
               .sort((a, b) => b.data.entry - a.data.entry)
               .map((item) => {
                 return (
-                  <article
-                    id={item.data.entry}
-                    class="group relative flex flex-col sm:flex-row gap-4 sm:gap-8 items-start"
-                  >
+                  <article class="group relative flex flex-col sm:flex-row gap-4 sm:gap-8 items-start">
                     <div class="absolute -left-[41px] sm:-left-[57px] top-1.5 h-5 w-5 rounded-full border-2 border-border bg-background flex items-center justify-center group-hover:border-primary group-hover:scale-110 transition-all duration-300">
                       <div class="h-1.5 w-1.5 rounded-full bg-muted-foreground group-hover:bg-primary transition-colors" />
                     </div>
                     <div class="flex-1 min-w-0">
-                      <h3 class="text-lg sm:text-xl font-bold leading-tight mb-2 group-hover:text-primary transition-colors">
+                      <h3
+                        id={item.id}
+                        class="text-lg sm:text-xl font-bold leading-tight mb-2 group-hover:text-primary transition-colors"
+                      >
                         {item.data.entry}
                       </h3>
 
-                      <p class="text-base text-muted-foreground leading-relaxed mb-3">
-                        {item.body}
-                      </p>
+                      <p
+                        class="text-base text-muted-foreground leading-relaxed mb-3"
+                        set:html={item.rendered.html}
+                      ></p>
                     </div>
                   </article>
                 );

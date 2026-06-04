@@ -66,9 +66,10 @@ export const SITE: SiteConfig = {
   },
   googleAnalyticsId: '', // Example: 'G-XXXXXXXXXX'
   homeHeroDescription:
-    'Building premium web experiences with Astro, Svelte, and Tailwind. Focused on performance, aesthetics, and clean code. I am currently working on open-source tools and sharing my journey through writing.',
-  blogDescription: 'A collection of thoughts, tutorials, and general web discovery.',
-  projectsDescription: 'Things I’ve built that I’m proud of. Many of them are open-source.',
+    'Guiding teams and companies on their towards stronger Agile maturity, continuously learning and deepening my understanding along the way.',
+  blogDescription: 'A collection of thoughts, explanations, and general discovery.',
+  projectsDescription:
+    'Here will you find the roles I filled and contributions I brought in my previous assignments.',
 
   // Homepage post counts
   featuredPostsCount: 3,

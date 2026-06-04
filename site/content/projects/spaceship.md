@@ -4,6 +4,6 @@ description: 'A premium blog template built with Astro 5, Svelte 5, and Tailwind
 link: 'https://spaceship.alec.dev'
 github: 'https://github.com/alec/spaceship'
 tags: ['Astro', 'Svelte 5', 'Tailwind 4']
-types: ['open-source']
+types: ['personal']
 order: 2
 ---

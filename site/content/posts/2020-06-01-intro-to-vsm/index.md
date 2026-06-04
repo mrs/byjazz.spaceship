@@ -22,7 +22,7 @@ As a continuous learner, I find it valuable to keep track of what I've understoo
 
 ## Big Companies are aiming towards Agility too
 
-As [Agilty](/glossary#agility) matures from small teams, early concept validation, and startups to big companies, its transformative nature becomes one of the foremost concerns. How do you get from a traditional silo-prone organisation chart to one inspired by and resembling SAFe or LeSS?
+As [Agility](/glossary#agility) matures from small teams, early concept validation, and startups to big companies, its transformative nature becomes one of the foremost concerns. How do you get from a traditional silo-prone organisation chart to one inspired by and resembling SAFe or LeSS?
 
 Migrating towards a Scaled Agile company requires cultural changes, of course, but it also demands a clear picture of the starting point, and an idea of the desired destination.
 

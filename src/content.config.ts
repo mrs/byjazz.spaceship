@@ -42,7 +42,7 @@ const projects = defineCollection({
     link: z.url().optional(),
     github: z.url().optional(),
     tags: z.array(z.string()).default([]),
-    types: z.array(z.enum(['commercial', 'open-source', 'social'])).default([]),
+    types: z.array(z.enum(['commercial', 'community', 'personal'])).default([]),
     image: z.string().optional(),
     order: z.number().default(0),
     directLink: z.boolean().default(false).optional(),

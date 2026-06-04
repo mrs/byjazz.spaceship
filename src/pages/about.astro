@@ -35,12 +35,12 @@ function getSocialIcon(name: string): string {
 const aboutPost = await getEntry('about', 'index');
 const { Content } = aboutPost ? await render(aboutPost) : { Content: null };
 const aboutTitle =
-  aboutPost?.data.title || `I'm ${SITE.author}, a software designer and entrepreneur.`;
+  aboutPost?.data.title || `I'm ${SITE.author}, an Agile Professional and entrepreneur.`;
 ---
 
 <Layout
   title={`About | ${SITE.author}`}
-  description={`Learn more about ${SITE.author}, a developer and designer focused on building premium web experiences.`}
+  description={`Learn more about ${SITE.author}, an Agile Professional, former Developer, Musician and Photographer`}
   schema={schema}
 >
   <Breadcrumbs items={[{ name: 'About', href: '/about' }]} />
